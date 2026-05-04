@@ -47,13 +47,18 @@ st.divider()
 st.subheader("Enter Details to Predict Price")
 
 # 3 Columns aur Sliders UI ko aur better banane ke liye
+# 3 Columns UI ke liye
 col1, col2, col3 = st.columns(3)
+
 with col1:
-    area = st.slider("Area (sq ft):", min_value=100, max_value=10000, value=1000, step=50)
+    # max_value hata diya, ab koi upper limit nahi hai
+    area = st.number_input("Area (sq ft):", min_value=100, value=1000, step=100)
+
 with col2:
-    rooms = st.slider("Number of Rooms:", min_value=1, max_value=10, value=2)
+    rooms = st.number_input("Number of Rooms:", min_value=1, value=2, step=1)
+
 with col3:
-    person = st.slider("Number of Persons:", min_value=1, max_value=15, value=1)
+    person = st.number_input("Number of Persons:", min_value=1, value=1, step=1)
 
 # --- PREDICTION ---
 # Button ko wide kiya hai
