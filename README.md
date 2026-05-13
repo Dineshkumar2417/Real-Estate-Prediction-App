@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# Real-estate-price-prediction
-=======
 # 🏠 Real Estate Price Predictor
 
 This is an end-to-end Machine Learning web application that predicts property prices based on area, number of rooms, and number of occupants.
